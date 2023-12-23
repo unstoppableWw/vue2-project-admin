@@ -78,6 +78,34 @@ export const constantRoutes = [
   },
 
   {
+    path: '/blog',
+    component: Layout,
+    redirect: '/blog',
+    name: 'Blog',
+    meta: { title: '文章管理', icon: 'el-icon-s-help' },
+    children: [
+      {
+        path: '/blogList',
+        name: 'BlogList',
+        component: () => import('@/views/blogList/index'),
+        meta: { title: '文章列表', icon: 'table' }
+      },
+      {
+        path: '/blogType',
+        name: 'BlogType',
+        component: () => import('@/views/blogType/index'),
+        meta: { title: '文章分类', icon: 'tree' }
+      },
+      {
+        path: '/addBlog',
+        name: 'AddBlog',
+        component: () => import('@/views/addBlog/index'),
+        meta: { title: '添加文章', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
     path: '/form',
     component: Layout,
     children: [
@@ -86,6 +114,19 @@ export const constantRoutes = [
         name: 'Form',
         component: () => import('@/views/form/index'),
         meta: { title: 'Form', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/message',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Message',
+        component: () => import('@/views/message/index'),
+        meta: { title: '留言板', icon: 'el-icon-document' }
       }
     ]
   },
