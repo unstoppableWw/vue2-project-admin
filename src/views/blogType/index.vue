@@ -1,15 +1,15 @@
 <template>
-  <div>
-    blogtype
-  </div>
+    <div>
+        文章类型
+    </div>
 </template>
 
 <script>
-export default {
-
-}
+    export default {
+        
+    }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 
 </style>

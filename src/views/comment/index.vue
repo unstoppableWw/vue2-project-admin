@@ -1,6 +1,6 @@
 <template>
     <div>
-        添加文章
+        评论
     </div>
 </template>
 

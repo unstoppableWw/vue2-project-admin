@@ -1,6 +1,6 @@
 <template>
     <div>
-        添加文章
+        首页标语
     </div>
 </template>
 
