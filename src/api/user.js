@@ -8,11 +8,11 @@ export function loginApi(data) {
   })
 }
 
-export function getInfo(token) {
+// 恢复登录
+export function getInfo() {
   return request({
-    url: '/vue-admin-template/user/info',
-    method: 'get',
-    params: { token }
+    url: '/api/admin/whoami',
+    method: 'get'
   })
 }
 
