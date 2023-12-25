@@ -127,7 +127,6 @@ export default {
     },
     editBannerHandle(bannerInfo) {
       // 1. 将 bannerInfo 的数据给 form 2. 打开 dialog
-      console.log(bannerInfo)
       this.form = { ...bannerInfo }
 
       this.dialogFormVisible = true
@@ -137,7 +136,7 @@ export default {
       // 因为 api 文档要求三个首页标语都要发送过去，哪怕只改了其中一个
       const arr = [...this.data]
       for (var i = 0; i < arr.length; i++) {
-        if (arr[i].id == this.form.id) {
+        if (arr[i].id === this.form.id) {
           arr[i] = this.form
         }
       }
