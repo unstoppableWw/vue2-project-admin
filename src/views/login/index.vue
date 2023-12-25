@@ -88,35 +88,35 @@
   </div>
 </template>
 <script>
-import { validUsername } from '@/utils/validate'
+// import { validUsername } from '@/utils/validate'
 import { getCaptcha } from '@/api/captcha.js'
 export default {
   name: 'Login',
   data() {
-    const validateUsername = (rule, value, callback) => {
-      if (!validUsername(value)) {
-        callback(new Error('Please enter the correct user name'))
-      } else {
-        callback()
-      }
-    }
-    const validatePassword = (rule, value, callback) => {
-      if (value.length < 6) {
-        callback(new Error('The password can not be less than 6 digits'))
-      } else {
-        callback()
-      }
-    }
+    // const validateUsername = (rule, value, callback) => {
+    //   if (!validUsername(value)) {
+    //     callback(new Error('Please enter the correct user name'))
+    //   } else {
+    //     callback()
+    //   }
+    // }
+    // const validatePassword = (rule, value, callback) => {
+    //   if (value.length < 6) {
+    //     callback(new Error('The password can not be less than 6 digits'))
+    //   } else {
+    //     callback()
+    //   }
+    // }
 
-    // 密码的验证
-    const checkPassword = (rule, value, callback) => {
-      const reg = /abcd/
-      if (reg.test(value)) {
-        callback() // 验证通过
-      } else {
-        callback(new Error('密码不符合XXX要求'))
-      }
-    }
+    // // 密码的验证
+    // const checkPassword = (rule, value, callback) => {
+    //   const reg = /abcd/
+    //   if (reg.test(value)) {
+    //     callback() // 验证通过
+    //   } else {
+    //     callback(new Error('密码不符合XXX要求'))
+    //   }
+    // }
 
     return {
       svg: '',

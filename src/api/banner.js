@@ -1,5 +1,9 @@
-import request from './request'
+import request from '@/utils/request'
 
-export async function getBanners() {
-  return await request.get('/api/banner')
+// 获取首页标语
+export function getBanner() {
+  return request({
+    url: '/api/banner',
+    method: 'get'
+  })
 }
