@@ -1,5 +1,13 @@
-import request from './request'
+import request from '@/utils/request'
 
-export async function getAbout() {
-  return await request.get('/api/about')
+export function getAbout() {
+  return request.get('/api/about')
+}
+
+export function editAbout(data) {
+  return request({
+    url: '/api/about',
+    method: 'post',
+    data
+  })
 }
